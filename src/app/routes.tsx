@@ -15,8 +15,11 @@ import { HulePage } from "./pages/products/HulePage";
 import { Catalogo } from "./pages/Catalogo";
 import { ProductDetail } from "./pages/ProductDetail";
 import { Dashboard } from "./pages/Dashboard";
+import { CrmRedirect } from "./pages/CrmRedirect";
 
 export const router = createBrowserRouter([
+  { path: "/crm", Component: CrmRedirect },
+  { path: "/crm/*", Component: CrmRedirect },
   {
     path: "/",
     Component: Layout,
@@ -36,6 +39,7 @@ export const router = createBrowserRouter([
       { path: "catalogo", Component: Catalogo },
       { path: "catalogo/:slug", Component: ProductDetail },
       { path: "dashboard", Component: Dashboard },
+      { path: "*", Component: () => null },
     ],
   },
 ]);

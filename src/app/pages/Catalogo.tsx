@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import { useMeta } from "../hooks/useMeta";
 
 const SKU_SLUG: Record<string, string> = {
   // Thread Mask
@@ -231,6 +232,7 @@ const categoryColors: Record<Category, string> = {
 };
 
 export function Catalogo() {
+  useMeta({ title: "Catálogo de Productos | Smart Industries", description: "Explora nuestro catálogo completo de plugs, tapas, cintas, ganchos y soluciones de masking industrial." });
   const [active, setActive] = useState<Category>("Todos");
   const [search, setSearch] = useState("");
 

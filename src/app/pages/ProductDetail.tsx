@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router";
 import { ArrowRight, ArrowLeft, CheckCircle, Package, Thermometer, Layers, Wrench, ShoppingCart } from "lucide-react";
 import { PRODUCT_SPECS, getProduct } from "../data/productSpecs";
 import { useCart, PRODUCT_PRICE } from "../context/CartContext";
+import { useMeta } from "../hooks/useMeta";
 
 const MONO: React.CSSProperties = { fontFamily: "'Roboto Mono', monospace" };
 const SLAB: React.CSSProperties = { fontFamily: "'Roboto Slab', serif" };
@@ -11,6 +12,10 @@ export function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
   const product = getProduct(slug ?? "");
   const { addItem } = useCart();
+  useMeta({
+    title: product ? `${product.sku} ${product.name} | Smart Industries` : "Producto | Smart Industries",
+    description: product ? product.tagline : undefined,
+  });
 
   if (!product) {
     return (

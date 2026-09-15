@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import { useMeta } from "../hooks/useMeta";
 
 const timeline = [
   { year: "2002", title: "Fundación", desc: "SMART Industries nace con la misión de ofrecer soluciones industriales de precisión en México." },
@@ -26,6 +27,7 @@ const values = [
 ];
 
 export function Nosotros() {
+  useMeta({ title: "Nosotros | Smart Industries", description: "Conoce la historia, misión y valores de Smart Industries, fabricante líder de soluciones industriales en México desde 2002." });
   return (
     <div className="pt-16">
       {/* Hero */}

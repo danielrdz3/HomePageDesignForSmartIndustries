@@ -169,33 +169,12 @@ export function Navbar() {
                     </div>
                   )}
                 </>
-              ) : (
-                <div className="relative">
-                  <button
-                    onClick={() => setShowLoginPopup(!showLoginPopup)}
-                    className="flex items-center gap-2 px-4 py-2 border border-[#2c2c64] text-[#2c2c64] hover:bg-[#2c2c64] hover:text-white transition-colors"
-                    style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.78rem", letterSpacing: "0.06em" }}
-                  >
-                    <LogIn size={14} /> INGRESAR
-                  </button>
-                  {showLoginPopup && (
-                    <div className="absolute right-0 top-full mt-2 bg-white shadow-xl border-t-2 border-[#861e5c] p-5 z-50 w-72">
-                      <p style={{ fontFamily: "'Roboto Slab', serif", fontWeight: 700, fontSize: "0.9rem", color: "#2c2c64", marginBottom: "4px" }}>
-                        Iniciar sesión
-                      </p>
-                      <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.72rem", color: "#6b7280", marginBottom: "16px" }}>
-                        Accede a tu cuenta para ver tus pedidos y pagar de forma segura.
-                      </p>
-                      <GoogleSignInButton onSuccess={() => setShowLoginPopup(false)} />
-                    </div>
-                  )}
-                </div>
-              )}
+              ) : null}
             </div>
 
-            <button className="px-5 py-2 bg-[#2c2c64] text-white hover:bg-[#861e5c] transition-colors duration-150" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.78rem", letterSpacing: "0.06em" }}>
+            <Link to="/servicio" className="px-5 py-2 bg-[#2c2c64] text-white hover:bg-[#861e5c] transition-colors duration-150" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.78rem", letterSpacing: "0.06em" }}>
               COTIZAR
-            </button>
+            </Link>
           </div>
 
           {/* Mobile right */}
@@ -270,9 +249,9 @@ export function Navbar() {
               </div>
             )}
             <div className="pt-2">
-              <button className="w-full py-3 bg-[#2c2c64] text-white" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.82rem", letterSpacing: "0.06em" }}>
+              <Link to="/servicio" onClick={() => setMobileOpen(false)} className="block w-full py-3 bg-[#2c2c64] text-white text-center" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.82rem", letterSpacing: "0.06em" }}>
                 COTIZAR
-              </button>
+              </Link>
             </div>
           </div>
         </div>

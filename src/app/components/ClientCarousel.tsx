@@ -29,7 +29,7 @@ export function ClientCarousel() {
             letterSpacing: "-0.01em",
           }}
         >
-          Clientes
+          Nuestros Clientes
         </h4>
         <div className="w-12 h-0.5 bg-[#861e5c] mx-auto mt-3" />
       </div>

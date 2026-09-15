@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /crm
+
+Sitemap: https://smartct.mx/sitemap.xml

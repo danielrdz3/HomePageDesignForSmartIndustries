@@ -1,4 +1,5 @@
 import { Mail, Phone, Clock, MapPin, CheckCircle, ExternalLink } from "lucide-react";
+import { useMeta } from "../hooks/useMeta";
 
 const MONO = { fontFamily: "'Roboto Mono', monospace" } as React.CSSProperties;
 const SLAB = { fontFamily: "'Roboto Slab', serif" } as React.CSSProperties;
@@ -53,6 +54,7 @@ const offices = [
 ];
 
 export function Servicio() {
+  useMeta({ title: "Servicio y Cotización | Smart Industries", description: "Solicita una cotización personalizada. Contáctanos en Guadalajara y Monterrey para soporte técnico y soluciones a medida." });
   return (
     <div className="pt-16">
       {/* Hero */}

@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
+import { useMeta } from "../hooks/useMeta";
 
 const applications = [
   {
@@ -53,6 +54,7 @@ const applications = [
 ];
 
 export function Aplicaciones() {
+  useMeta({ title: "Aplicaciones | Smart Industries", description: "Descubre las aplicaciones industriales de nuestros productos: pintura electrostática, anodizado, galvanizado, soldadura y más." });
   return (
     <div className="pt-16">
       {/* Hero */}

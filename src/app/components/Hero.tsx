@@ -13,32 +13,8 @@ export function Hero() {
         }}
       />
 
-      {/* Clients strip — full width black bar at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 bg-[#000000] border-t border-white/10 z-20">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-8">
-            <span
-              className="text-white/30 shrink-0"
-              style={{ fontFamily: "'Roboto Mono', monospace", fontSize: "0.64rem", letterSpacing: "0.14em" }}
-            >
-              CLIENTES DE CONFIANZA
-            </span>
-            <div className="flex items-center gap-8 flex-wrap">
-              {["Boeing", "Honda", "Tesla", "John Deere", "Polaris"].map((c) => (
-                <span
-                  key={c}
-                  className="text-white/50 hover:text-white transition-colors"
-                  style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "0.78rem", letterSpacing: "0.06em" }}
-                >
-                  {c.toUpperCase()}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-8 w-full">
+<div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-5rem)]">
 
           {/* Left: text */}

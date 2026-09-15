@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
+import { useMeta } from "../hooks/useMeta";
 
 const products = [
   { title: "Sistemas de Masking", desc: "Enmascaramiento de precisión de fácil aplicación y remoción rápida sin residuos.", href: "/productos/sistemas-de-masking", img: "https://images.unsplash.com/photo-1536356915696-c6bf1c01da46?w=600&h=400&fit=crop&auto=format", tag: "Alta precisión" },
@@ -11,6 +12,7 @@ const products = [
 ];
 
 export function ProductosLanding() {
+  useMeta({ title: "Productos | Smart Industries", description: "Catálogo completo de sistemas de masking, plugs de silicón, tapas, ganchos, cintas y soluciones de protección industrial." });
   return (
     <div className="pt-16">
       <div className="bg-[#2c2c64] relative overflow-hidden">
